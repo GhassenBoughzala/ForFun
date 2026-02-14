@@ -117,7 +117,7 @@ const Index = () => {
             className="text-5xl md:text-7xl mb-6 text-primary"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Hihi zeyd maak yelhob 
+            Hihi Merciiiii
           </h1>
           <p className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
             I knew you'd say yes! 🥰
