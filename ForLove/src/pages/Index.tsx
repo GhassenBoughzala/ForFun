@@ -1,8 +1,9 @@
 /* eslint-disable react-hooks/purity */
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 
 const LOVE_MESSAGES = [
   "You make my heart go brrrr 💓",
+  "Nhebek ye Sasso 💓",
   "You're my favorite notification 📱",
   "You're the cheese to my pizza 🍕",
   "My love for you is like a candle... if you forget me I will burn your house down 🔥",
@@ -32,6 +33,8 @@ const FallingHeart = ({
 );
 
 const Index = () => {
+  const [countdown, setCountdown] = useState(10);
+  const [showMain, setShowMain] = useState(false);
   const [said, setSaid] = useState<"yes" | "celebrate" | null>(null);
   const [noPos, setNoPos] = useState<{ x: number; y: number } | null>(null);
   const [noCount, setNoCount] = useState(0);
@@ -43,6 +46,38 @@ const Index = () => {
     setNoPos({ x, y });
     setNoCount((c) => c + 1);
   }, []);
+
+  useEffect(() => {
+    let count = 10;
+    const interval = setInterval(() => {
+      count--;
+      if (count <= 0) {
+        clearInterval(interval);
+        setShowMain(true);
+      }
+      setCountdown(count);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  if (!showMain) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-background relative overflow-hidden">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <FallingHeart key={i} delay={i * 0.3} left={Math.random() * 100} size={1 + Math.random() * 1.5} />
+        ))}
+        <div className="z-10 text-center">
+          <p className="text-2xl text-muted-foreground mb-4 animate-pulse">Something special is coming for you Yasmine...</p>
+          <div
+            className="text-9xl md:text-[12rem] font-bold text-primary"
+            style={{ fontFamily: "var(--font-display)", animation: "heart-beat 0.8s ease-in-out infinite" }}
+          >
+            {countdown === 0 ? "💖" : countdown}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const noTexts = [
     "No 😢",
@@ -82,7 +117,7 @@ const Index = () => {
             className="text-5xl md:text-7xl mb-6 text-primary"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            YAAAY!
+            Hihi zeyd maak yelhob 
           </h1>
           <p className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
             I knew you'd say yes! 🥰
