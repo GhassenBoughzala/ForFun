@@ -33,7 +33,7 @@ const FallingHeart = ({
 );
 
 const Index = () => {
-  const [countdown, setCountdown] = useState(10);
+  const [countdown, setCountdown] = useState(5);
   const [showMain, setShowMain] = useState(false);
   const [said, setSaid] = useState<"yes" | "celebrate" | null>(null);
   const [noPos, setNoPos] = useState<{ x: number; y: number } | null>(null);
@@ -48,7 +48,7 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
-    let count = 10;
+    let count = 5;
     const interval = setInterval(() => {
       count--;
       if (count <= 0) {
