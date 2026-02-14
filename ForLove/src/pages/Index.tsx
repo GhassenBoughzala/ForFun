@@ -60,10 +60,10 @@ const Index = () => {
   if (said === "celebrate") {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-background">
-        {Array.from({ length: 20 }).map((_, i) => (
+        {Array.from({ length: 50 }).map((_, i) => (
           <FallingHeart
             key={i}
-            delay={i * 0.3}
+            delay={i * 0.01}
             left={Math.random() * 100}
             size={1 + Math.random() * 2}
           />
@@ -107,23 +107,16 @@ const Index = () => {
       ref={containerRef}
       className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-background px-4"
     >
-      {Array.from({ length: 12 }).map((_, i) => (
+      {Array.from({ length: 50 }).map((_, i) => (
         <FallingHeart
           key={i}
-          delay={i * 0.5}
+          delay={i * 0.01}
           left={Math.random() * 100}
           size={1 + Math.random() * 1.5}
         />
       ))}
 
       <div className="z-10 text-center max-w-lg">
-        <div
-          className="text-7xl md:text-9xl mb-8 inline-block"
-          style={{ animation: "heart-beat 1.2s ease-in-out infinite" }}
-        >
-          💕
-        </div>
-
         <h1
           className="text-4xl md:text-6xl mb-4 text-primary leading-tight"
           style={{ fontFamily: "var(--font-display)" }}
@@ -144,7 +137,7 @@ const Index = () => {
               padding: `${1 + noCount * 0.1}rem ${2.5 + noCount * 0.2}rem`,
             }}
           >
-            Yes! 💖
+            Yes 🤍
           </button>
 
           <button
