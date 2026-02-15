@@ -2,12 +2,12 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 
 const LOVE_MESSAGES = [
-  "You make my heart go brrrr 💓",
-  "Nhebek ye Sasso 💓",
-  "You're my favorite notification 📱",
-  "You're the cheese to my pizza 🍕",
-  "My love for you is like a candle... if you forget me I will burn your house down 🔥",
-  "Are you a magician? Because whenever I look at you, everyone else disappears ✨",
+  "I love you more than naps… and that’s dangerous 😴💞",
+  "Nhebek azizty 💓",
+  "I’d pause my game for you. That’s real love 🎮",
+  "I must be a squirrel because I’m nuts about you 🐿️",
+  "You’re my unpaid therapist but cuter 🫠",
+  "Are you a loan? Because you have my interest 📈",
 ];
 
 const FallingHeart = ({
@@ -64,13 +64,23 @@ const Index = () => {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-background relative overflow-hidden">
         {Array.from({ length: 8 }).map((_, i) => (
-          <FallingHeart key={i} delay={i * 0.3} left={Math.random() * 100} size={1 + Math.random() * 1.5} />
+          <FallingHeart
+            key={i}
+            delay={i * 0.3}
+            left={Math.random() * 100}
+            size={1 + Math.random() * 1.5}
+          />
         ))}
         <div className="z-10 text-center">
-          <p className="text-2xl text-muted-foreground mb-4 animate-pulse">Something special is coming for you Yasmine...</p>
+          <p className="text-2xl text-muted-foreground mb-4 animate-pulse">
+            Something special is coming for you Yasmine...
+          </p>
           <div
             className="text-9xl md:text-[12rem] font-bold text-primary"
-            style={{ fontFamily: "var(--font-display)", animation: "heart-beat 0.8s ease-in-out infinite" }}
+            style={{
+              fontFamily: "var(--font-display)",
+              animation: "heart-beat 0.8s ease-in-out infinite",
+            }}
           >
             {countdown === 0 ? "💖" : countdown}
           </div>
