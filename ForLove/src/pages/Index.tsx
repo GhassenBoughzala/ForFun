@@ -3,11 +3,15 @@ import { useState, useRef, useCallback, useEffect } from "react";
 
 const LOVE_MESSAGES = [
   "I love you more than naps… and that’s dangerous 😴💞",
-  "Nhebek azizty 💓",
+  "Yekhi lkada cheykha al site dekhla kharja 😂, benna rak 💓",
   "I’d pause my game for you. That’s real love 🎮",
   "I must be a squirrel because I’m nuts about you 🐿️",
   "You’re my unpaid therapist but cuter 🫠",
   "Are you a loan? Because you have my interest 📈",
+  "You make my heart go brrrr 💓",
+  "You're my favorite notification 📱",
+  "You're the cheese to my pizza 🍕",
+  "Are you a magician? Because whenever I look at you, everyone else disappears ✨",
 ];
 
 const FallingHeart = ({
