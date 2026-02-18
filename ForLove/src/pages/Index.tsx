@@ -170,6 +170,13 @@ const Index = () => {
           className="text-4xl md:text-6xl mb-4 text-primary leading-tight"
           style={{ fontFamily: "var(--font-display)" }}
         >
+          This website is closed, comeback next year 👋
+        </h1>
+        {/*  
+        <h1
+          className="text-4xl md:text-6xl mb-4 text-primary leading-tight"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
           Will You Be My Valentine?
         </h1>
 
@@ -214,6 +221,7 @@ const Index = () => {
               : "Just give up and say YES already! 😄"}
           </p>
         )}
+          */}
       </div>
     </div>
   );
