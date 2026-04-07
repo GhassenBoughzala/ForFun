@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
+import { useState, useCallback } from "react";
+
 import Sparkles from "@/components/Sparkles";
 import LockScreen from "@/components/LockScreen";
-import { useState, useCallback } from "react";
+import BackgroundMusic from "@/components/BackgroundMusic";
+
 import photo1 from "@/assets/P1.jpg";
 import photo2 from "@/assets/P2.jpg";
 import photo3 from "@/assets/P3.jpg";
@@ -33,6 +36,7 @@ const Birthday = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden relative">
       <Sparkles />
+      <BackgroundMusic />
       {/* Hero */}
       <section className="relative flex flex-col items-center justify-center min-h-screen px-6 text-center">
         <motion.div
@@ -41,7 +45,7 @@ const Birthday = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="space-y-6"
         >
-          <p className="text-primary tracking-[0.3em] uppercase text-sm font-light">
+          <p className="text-primary tracking-[0.3em] uppercase text-lg font-light">
             Happy Birthday
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold text-foreground leading-tight">
@@ -85,10 +89,10 @@ const Birthday = () => {
               />
             </div>
             <div className="w-full md:w-2/5 text-center md:text-left space-y-4">
-              <span className="text-primary text-6xl font-display opacity-30">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <p className="text-foreground text-2xl md:text-3xl italic font-light leading-relaxed">
+             {/*  <span className="text-primary text-6xl font-display opacity-30">
+                {String(i + 1).padStart(2, "")}
+              </span> */}
+              <p className="text-foreground text-4xl md:text-3xl italic font-light leading-relaxed">
                 {captions[i]}
               </p>
             </div>
