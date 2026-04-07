@@ -9,25 +9,27 @@ const BackgroundMusic = () => {
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
-    audio.src = pianoMusic;
+
+    // Set source from the imported URL
+    audio.src = pianoMusic;     // Important: assign the imported path
 
     const tryPlay = () => {
       audio.volume = 0.45;
-      audio
-        .play()
+      audio.play()
         .then(() => setPlaying(true))
-        .catch(() => {
-          console.log("Err");
-        });
+        .catch((err) => console.log("Autoplay prevented:", err));
     };
 
-    // Autoplay may be blocked; try on first user interaction
+    // Try autoplay (often blocked by browsers)
     tryPlay();
+
+    // Fallback: play on first user click anywhere
     const handler = () => {
       tryPlay();
       document.removeEventListener("click", handler);
     };
     document.addEventListener("click", handler);
+
     return () => document.removeEventListener("click", handler);
   }, []);
 

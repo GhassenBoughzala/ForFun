@@ -21,7 +21,7 @@ const captions = [
 
 const Birthday = () => {
   const [locked, setLocked] = useState(
-    () => Date.now() < new Date("2026-04-08T00:00:00").getTime()
+    () => Date.now() < new Date("2026-04-07T00:00:00").getTime()
   );
   const handleUnlock = useCallback(() => setLocked(false), []);
   if (locked) {
