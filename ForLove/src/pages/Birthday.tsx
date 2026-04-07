@@ -5,10 +5,10 @@ import Sparkles from "@/components/Sparkles";
 import LockScreen from "@/components/LockScreen";
 import BackgroundMusic from "@/components/BackgroundMusic";
 
-import photo1 from "@/assets/P1.jpg";
-import photo2 from "@/assets/P2.jpg";
-import photo3 from "@/assets/P3.jpg";
-import photo4 from "@/assets/P4.jpg";
+import photo1 from "@/assets/p1.jpg";
+import photo2 from "@/assets/p2.jpg";
+import photo3 from "@/assets/p3.jpg";
+import photo4 from "@/assets/p4.jpg";
 
 const photos = [photo2, photo1, photo3, photo4];
 
