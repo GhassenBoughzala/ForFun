@@ -54,9 +54,9 @@ const LockScreen = ({ onUnlock }: { onUnlock: () => void }) => {
         <h1 className="text-4xl md:text-6xl font-semibold text-foreground">
           Something <span className="text-primary italic">Special</span> is Coming
         </h1>
-        <p className="text-muted-foreground text-lg md:text-xl font-light max-w-md mx-auto">
+       {/*  <p className="text-muted-foreground text-lg md:text-xl font-light max-w-md mx-auto">
           A surprise awaits you on April 8th…
-        </p>
+        </p> */}
 
         <div className="flex gap-4 md:gap-8 justify-center pt-4">
           {units.map((u) => (
