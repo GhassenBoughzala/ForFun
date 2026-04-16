@@ -1,4 +1,4 @@
-/* import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useCallback } from "react";
 
 import Sparkles from "@/components/Sparkles";
@@ -9,17 +9,23 @@ import photo1 from "@/assets/p1.jpg";
 import photo2 from "@/assets/p2.jpg";
 import photo3 from "@/assets/p3.jpg";
 import photo4 from "@/assets/p4.jpg";
+import photo5 from "@/assets/p5.jpg";
+import photo6 from "@/assets/p6.jpg";
+import photo7 from "@/assets/p7.jpg";
 
-const photos = [photo2, photo1, photo3, photo4];
+const photos = [photo2, photo1, photo3, photo5, photo6, photo7, photo4];
 
 const captions = [
+  "My today and all my tomorrows 💍",
   "Every moment with you is magic ✨",
-  "Together is my favorite place 💐",
   "You & me, always 💋",
+  "Just us, just love 💑",
+  "Together is my favorite place 💐",
+  "My heart chose you 💘",
   "My favorite smile in the world 💛",
-]; */
+];
 
-/* const Birthday = () => {
+const Birthday = () => {
   const [locked, setLocked] = useState(
     () => Date.now() < new Date("2026-04-08T00:00:00").getTime()
   );
@@ -132,6 +138,6 @@ const captions = [
       </section>
     </div>
   );
-/* };  */
+};
 
-/* export default Birthday; */
+export default Birthday;
