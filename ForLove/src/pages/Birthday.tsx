@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+/* import { motion } from "framer-motion";
 import { useState, useCallback } from "react";
 
 import Sparkles from "@/components/Sparkles";
@@ -23,9 +23,9 @@ const captions = [
   "Together is my favorite place 💐",
   "My heart chose you 💘",
   "My favorite smile in the world 💛",
-];
+]; */
 
-const Birthday = () => {
+/* const Birthday = () => {
   const [locked, setLocked] = useState(
     () => Date.now() < new Date("2026-04-08T00:00:00").getTime()
   );
@@ -138,6 +138,6 @@ const Birthday = () => {
       </section>
     </div>
   );
-};
+/* };  */
 
-export default Birthday;
+/* export default Birthday; */
